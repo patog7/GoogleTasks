@@ -8,18 +8,50 @@
 
 import UIKit
 import CoreData
+import AddressBook
+import AssetsLibrary
+import Foundation
+import CoreLocation
+import CoreMotion
+import CoreGraphics
+import CoreText
+import MediaPlayer
+import Security
+import SystemConfiguration
+import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?,
+        annotation: AnyObject?) -> Bool {
+            println("openURL: \(url)")
+            return GPPURLHandler.handleURL(url, sourceApplication: sourceApplication, annotation:
+                annotation)
+    }
+    
 
-
+    
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        var pageControl = UIPageControl.appearance()
+        
+        pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
+        
+        pageControl.currentPageIndicatorTintColor = UIColor.blackColor()
+        
+        pageControl.backgroundColor = UIColor.whiteColor()
+        
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+
+        
         return true
     }
-
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -43,13 +75,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
+    
+    
 
     // MARK: - Core Data stack
 
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "main.GoogleTasks" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-        return urls[urls.count-1] as NSURL
+        return urls[urls.count-1] as! NSURL
     }()
 
     lazy var managedObjectModel: NSManagedObjectModel = {
@@ -72,7 +106,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
             dict[NSLocalizedFailureReasonErrorKey] = failureReason
             dict[NSUnderlyingErrorKey] = error
-            error = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
+            error = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict as [NSObject : AnyObject])
             // Replace this with code to handle the error appropriately.
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog("Unresolved error \(error), \(error!.userInfo)")

@@ -9,5 +9,8 @@
 #ifndef GoogleTasks_Header_h
 #define GoogleTasks_Header_h
 
+#import <GooglePlus/GooglePlus.h>
+#import <GoogleOpenSource/GoogleOpenSource.h>
+
 
 #endif

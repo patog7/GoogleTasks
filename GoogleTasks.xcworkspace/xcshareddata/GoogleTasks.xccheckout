@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>829D149B-DBB1-4FDA-9A5B-011DC6014EE1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GoogleTasks</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FCD2799E535279DD3A6ADC2C6B9B1BEC21F8B484</key>
+		<string>https://github.com/patog7/GoogleTasks.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GoogleTasks.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FCD2799E535279DD3A6ADC2C6B9B1BEC21F8B484</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/patog7/GoogleTasks.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FCD2799E535279DD3A6ADC2C6B9B1BEC21F8B484</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FCD2799E535279DD3A6ADC2C6B9B1BEC21F8B484</string>
+			<key>IDESourceControlWCCName</key>
+			<string>GoogleTasks</string>
+		</dict>
+	</array>
+</dict>
+</plist>

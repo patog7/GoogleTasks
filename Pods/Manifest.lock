@@ -1,10 +1,13 @@
 PODS:
-  - MaterialKit (0.3)
+  - MaterialKit (0.3.2)
+  - SwiftyJSON (2.2.0)
 
 DEPENDENCIES:
   - MaterialKit
+  - SwiftyJSON (>= 2.2)
 
 SPEC CHECKSUMS:
-  MaterialKit: 033194f724987fc0d11816d458e74de55949bd83
+  MaterialKit: dba786a24f5e5cdeb638000b899b05042dafa41c
+  SwiftyJSON: 0b3e6c07af17ff745e77e8e9984097b55c956e5c
 
 COCOAPODS: 0.36.0

@@ -8,6 +8,9 @@
 
 import MaterialKit
 
+
+
+
 @objc protocol TaskCellDelegate{
     
     func didSelectCheckButtonAtIndexPath(indexPath: NSIndexPath)
@@ -16,6 +19,8 @@ import MaterialKit
 
 class TasksCell: MKTableViewCell {
 
+    var task = Task()
+    
     var checkstatus:Bool!
     
     var indexPath:NSIndexPath!
@@ -44,6 +49,8 @@ class TasksCell: MKTableViewCell {
         
         // Configure the view for the selected state
     }
+    
+    
     
     
     
